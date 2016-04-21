@@ -41,10 +41,14 @@ public class SaveAction implements ActionListener {
 					if(bts[0].equals("bt"))
 					{
 						save[iter++] = f.GetPair(bts[1]);
-						save[iter++] = (bts[0]+";"+i+";"+j);
+						if(bts.length == 3)
+							save[iter++] = (bts[0]+";"+i+";"+j+";"+bts[2]);
+						else
+							save[iter++] = (bts[0]+";"+i+";"+j+";10");
 						continue;
 					}
-					
+					if (bts[0].equals(""))
+						bts[0] = "wy";
 					if(!bts[0].equals("d"))
 						save[iter++] = (bts[0]+";"+i+";"+j);
 				}
@@ -59,7 +63,6 @@ public class SaveAction implements ActionListener {
 			}
 			fwriter.close();
 		} catch(Exception e){}
-		
 		game.add(table);
 		game.setVisible(true);
 	}

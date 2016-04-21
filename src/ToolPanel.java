@@ -31,10 +31,10 @@ public class ToolPanel extends JPanel {
 		Way = new JLabel("WAY: wy - white");
 		Wall = new JLabel("WALL: wl - red");
 		Box = new JLabel("BOX: bx - orange");
-		Button = new JLabel("BUTTON: bt:N - white");
+		Button = new JLabel("BUTTON: bt:N:K - white");
 		Door = new JLabel("DOOR: d:N - white");
 		special = new JLabel("SPECIAL: sw - pink");
-		where = new JLabel("N - association");
+		where = new JLabel("N - association, K - weight");
 		
 		this.add(Player);
 		this.add(Jaffa);
